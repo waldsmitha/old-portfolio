@@ -1,6 +1,6 @@
 const listItems =   
     document.querySelectorAll("li");
-    photos = document.querySelectorAll(".project");
+    photos = document.querySelectorAll("img");
 
 listItems.forEach((li, i) => {
   li.addEventListener("mouseenter", () => {
