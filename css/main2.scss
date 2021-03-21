@@ -1,0 +1,130 @@
+$h1: 3rem;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: rgb(238, 238, 238);
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: $h1;
+}
+
+nav {
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5rem;
+  padding-bottom: 5rem;
+
+  ul {
+    display: flex;
+    list-style-type: none;
+  }
+  li {
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 71% 29% 68% 32% / 45% 40% 60% 55%;
+    border: solid 1px;
+    transition: border-radius 1s;
+    width: auto;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    // &:before {
+    //   position: absolute;
+    //   content: "";
+    //   width: auto;
+    //   border-bottom: 2px solid black;
+    //   top: 2.1rem;
+    //   transition: width 1s;
+    // }
+
+    &:hover {
+      border: 1px solid gray;
+      border-radius: 39% 61% 23% 77% / 41% 56% 44% 59%;
+
+      //   &:before {
+      //     width: 80%;
+      //   }
+    }
+  }
+}
+
+.images {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+  height: 80vh;
+  padding-bottom: 10vh;
+
+  h1 {
+    text-align: center;
+  }
+}
+
+.project {
+  clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+  visibility: hidden;
+  transition: 0.5s;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  max-height: 60vh;
+  object-fit: cover;
+  cursor: pointer;
+  position: absolute;
+}
+
+.intro {
+  visibility: visible;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+@media screen and (max-width: 510px) {
+  nav {
+    padding: 5rem;
+    display: block;
+    text-align: center;
+
+    ul {
+      display: none;
+    }
+  }
+
+  .images {
+    width: 90%;
+    h1 {
+      display: none;
+    }
+  }
+
+  img {
+    width: 100%;
+    max-height: 60vh;
+    object-fit: cover;
+    transition: 0.5s;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    cursor: pointer;
+    visibility: visible;
+    position: relative;
+    padding: 1rem 0;
+  }
+}

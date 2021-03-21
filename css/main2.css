@@ -1,0 +1,131 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #eeeeee;
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+nav {
+  min-height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 5rem;
+  padding-bottom: 5rem;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+nav li {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 71% 29% 68% 32% / 45% 40% 60% 55%;
+  border: solid 1px;
+  -webkit-transition: border-radius 1s;
+  transition: border-radius 1s;
+  width: auto;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+nav li:hover {
+  border: 1px solid gray;
+  border-radius: 39% 61% 23% 77% / 41% 56% 44% 59%;
+}
+
+.images {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+  height: 80vh;
+  padding-bottom: 10vh;
+}
+
+.images h1 {
+  text-align: center;
+}
+
+.project {
+  -webkit-clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+          clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+  visibility: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  max-height: 60vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+  position: absolute;
+}
+
+.intro {
+  visibility: visible;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+@media screen and (max-width: 510px) {
+  nav {
+    padding: 5rem;
+    display: block;
+    text-align: center;
+  }
+  nav ul {
+    display: none;
+  }
+  .images {
+    width: 90%;
+  }
+  .images h1 {
+    display: none;
+  }
+  img {
+    width: 100%;
+    max-height: 60vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    cursor: pointer;
+    visibility: visible;
+    position: relative;
+    padding: 1rem 0;
+  }
+}
+/*# sourceMappingURL=main2.css.map */

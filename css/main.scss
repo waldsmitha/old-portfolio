@@ -1,0 +1,62 @@
+$font-normal: 1.2rem;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  position: fixed;
+  width: 800px;
+  text-align: left;
+  margin-right: 4rem;
+}
+
+ul {
+  list-style-type: none;
+  width: 10rem;
+  li {
+    padding: 3rem;
+    background: blue;
+    font-size: $font-normal;
+    cursor: pointer;
+    text-transform: uppercase;
+    position: relative;
+    border-radius: 72% 28% 88% 12% / 35% 30% 70% 65%;
+    border: 1px solid;
+    //   border-radius: 35% 65% 49% 51% / 59% 63% 37% 41%;
+  }
+}
+
+.container {
+  display: flex;
+  position: relative;
+}
+.images {
+  position: absolute;
+  width: 400px;
+  right: 5rem;
+}
+
+img {
+  width: 100%;
+  position: absolute;
+  cursor: pointer;
+  visibility: visible;
+  clip-path: polygon(100% 0%, 50% 100%, 50% 100%);
+  transition: 0.3s;
+}
+
+.intro {
+  visibility: visible;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
