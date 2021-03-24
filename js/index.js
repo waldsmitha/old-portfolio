@@ -19,6 +19,10 @@ listItems.forEach((li, i) => {
 console.log(window.innerWidth);
 
 const nytText = document.querySelector("#nyt-text");
+const nav = document.querySelector("nav");
+const cta = document.querySelector(".cta");
+const gallery = document.querySelector(".images");
+
 let tl = gsap.timeline({ repeat: -1 });
 
 tl.to(nytText, {
@@ -29,3 +33,17 @@ tl.to(nytText, {
     padSpace: true,
   },
 });
+
+document.addEventListener(
+  "DOMContentLoaded",
+  function () {
+    gsap.fromTo(
+      nav,
+      { y: "-100%", opacity: 0 },
+      { y: 0, opacity: 1, duration: 1, delay: 0.25 }
+    );
+    gsap.to(gallery, { opacity: 1, duration: 1, delay: 0.5 });
+    gsap.to(cta, { opacity: 1, duration: 1, delay: 0.75 });
+  },
+  false
+);
