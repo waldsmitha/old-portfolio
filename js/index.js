@@ -1,5 +1,5 @@
 const listItems = document.querySelectorAll("li");
-photos = document.querySelectorAll(".project");
+const photos = document.querySelectorAll(".project");
 
 listItems.forEach((li, i) => {
   li.addEventListener("mouseenter", () => {
@@ -10,7 +10,7 @@ listItems.forEach((li, i) => {
   });
 
   li.addEventListener("mousemove", (e) => {
-    console.log(e);
+    // console.log(e);
     photos[i].style.left = -e.movementX * 1.5 + "px";
     photos[i].style.top = -e.clientY * 0.5 + "px";
   });
